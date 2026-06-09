@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Two Grow Academy — Start Your Future</title>
+    <title>To Grow Academy </title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
@@ -11,8 +11,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-    <!-- ========== HEADER ========== -->
+    <!-- هيدر -->
     <header class="nav">
         <div class="container nav-inner">
             <a href="#home" class="logo">
@@ -52,9 +51,8 @@
             </button>
         </div>
     </header>
-
     <main>
-        <!-- ========== HERO ========== -->
+        <!-- ========== هيرو سيكشن ========== -->
         <section class="hero" id="home">
             <div class="container hero-grid">
                 <div class="hero-text">
@@ -116,8 +114,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- ========== ABOUT ========== -->
+        <!-- ========== قسم عن الاكاديمي ========== -->
         <section class="section" id="about">
             <div class="container">
                 <div class="about-head">
@@ -178,8 +175,7 @@
                 </div>
             </div>
         </section>
-
-        <!-- ========== COURSES ========== -->
+        <!-- ========== كورسات ========== -->
         <section class="section section-alt" id="courses">
             <div class="container">
                 <div class="section-head center">
@@ -190,8 +186,7 @@
                 <div class="courses-grid" id="coursesGrid"></div>
             </div>
         </section>
-
-        <!-- ========== TRAINERS ========== -->
+        <!-- ========== حبراء ========== -->
         <section class="section" id="trainers">
             <div class="container">
                 <div class="section-head center">
@@ -202,8 +197,7 @@
                 <div class="trainers-grid" id="trainersGrid"></div>
             </div>
         </section>
-
-        <!-- ========== OFFERS ========== -->
+        <!-- ========== عروض ========== -->
         <section class="section section-alt" id="offers">
             <div class="container">
                 <div class="section-head center">
@@ -214,8 +208,7 @@
                 <div class="offers-grid" id="offersGrid"></div>
             </div>
         </section>
-
-        <!-- ========== PROJECTS ========== -->
+        <!-- ========== مشاريع ========== -->
         <section class="section" id="projects">
             <div class="container">
                 <div class="section-head center">
@@ -227,8 +220,7 @@
                 <div class="gallery" id="projectGallery"></div>
             </div>
         </section>
-
-        <!-- ========== GRADUATION ========== -->
+        <!-- ========== حفلات ========== -->
         <section class="section section-alt" id="graduation">
             <div class="container">
                 <div class="section-head center">
@@ -240,8 +232,7 @@
                 <div class="gallery" id="gradGallery"></div>
             </div>
         </section>
-
-<!-- ========== TESTIMONIALS SECTION ========== -->
+<!-- ========== اراء الطلبه ========== -->
 <section class="section" id="testimonials">
     <div class="container">
         <div class="section-head center">
@@ -258,8 +249,7 @@
         </div>
     </div>
 </section>
-
-        <!-- ========== CONTACT ========== -->
+        <!-- ========== تواصل  ========== -->
         <section class="section section-alt" id="contact">
             <div class="container">
                 <div class="section-head center">
@@ -326,8 +316,7 @@
             </div>
         </section>
     </main>
-
-    <!-- ========== FOOTER ========== -->
+    <!-- ========== فووتر ========== -->
     <footer class="footer">
         <div class="container footer-grid">
             <div>
@@ -377,29 +366,24 @@
             <i class="fa-solid fa-arrow-up"></i>
         </button>
     </footer>
-
     <div class="lightbox" id="lightbox">
         <button class="lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
         <div class="lb-content" id="lbContent"></div>
     </div>
-
     <script src="data.js"></script>
     <script src="main.js"></script>
     <script>
-        // Language switching logic (full translation)
+        // ترجمه 
         let currentLang = localStorage.getItem("language") || "en";
         const translations = TRANSLATIONS;
-
         function applyLanguage(lang) {
             currentLang = lang;
             localStorage.setItem("language", lang);
             document.documentElement.setAttribute("lang", lang === "ar" ? "ar" : "en");
             document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
             document.getElementById("langText").innerText = lang === "ar" ? "ع" : "EN";
-
             const t = translations[lang];
-
-            // Navbar
+            // ناف بار
             const navLinks = document.querySelectorAll(".nav-links a");
             navLinks[0].innerText = t.nav_home;
             navLinks[1].innerText = t.nav_about;
@@ -410,8 +394,7 @@
             navLinks[6].innerText = t.nav_graduation;
             navLinks[7].innerText = t.nav_contact;
             document.getElementById("registerBtnText").innerText = t.register_btn;
-
-            // Hero
+            // هيرو
             document.querySelector(".hero-text .badge").innerHTML = `<i class="fa-solid fa-rocket"></i> ${t.hero_badge}`;
             document.querySelector(".hero-text h1").innerHTML = `${t.hero_title} <span class="accent">${t.hero_title_accent}</span>`;
             document.querySelector(".hero-text > p").innerText = t.hero_desc;
@@ -419,8 +402,7 @@
             document.querySelector(".hero-cta .btn-outline").innerText = t.view_courses_btn;
             document.querySelector(".students strong").innerHTML = `5,000+ ${t.students_count}`;
             document.querySelector(".students p").innerText = t.students_label;
-
-            // About
+            // عن
             document.querySelector("#about .about-head h1").innerHTML = t.about_badge;
             document.querySelector("#about .about-head h2").innerHTML = `${t.about_title} <span class="accent">${t.about_title_accent}</span>`;
             document.querySelector("#about .about-head .lead").innerText = t.about_desc;
@@ -430,14 +412,12 @@
             document.getElementById("missionDesc").innerText = t.mission_desc;
             document.getElementById("whyTitle").innerText = t.why_title;
             document.getElementById("whyDesc").innerText = t.why_desc;
-
-            // Stats
+            // 
             document.getElementById("statCourses").innerText = t.courses_available;
             document.getElementById("statTrainers").innerText = t.expert_trainers;
             document.getElementById("statStudents").innerText = t.happy_students;
             document.getElementById("statSuccess").innerText = t.success_rate;
-
-            // Section headers
+            // هيدر
             document.getElementById("coursesBadge").innerHTML = t.courses_section_badge;
             document.getElementById("coursesTitle").innerText = t.courses_section_title;
             document.getElementById("coursesDesc").innerText = t.courses_section_desc;
@@ -458,8 +438,7 @@
             document.getElementById("contactBadge").innerHTML = t.contact_section_badge;
             document.getElementById("contactTitle").innerText = t.contact_section_title;
             document.getElementById("contactDesc").innerText = t.contact_section_desc;
-
-            // Contact form labels & placeholders
+            // تواصل
             document.getElementById("nameLabel").innerText = t.contact_name;
             document.getElementById("phoneLabel").innerText = t.contact_phone;
             document.getElementById("emailLabel").innerText = t.contact_email;
@@ -474,8 +453,7 @@
             document.getElementById("phoneTitle").innerText = t.phone_title;
             document.getElementById("emailTitle").innerText = t.email_title;
             document.getElementById("mapOverlay").innerHTML = `<i class="fa-solid fa-up-right-from-square"></i> ${t.open_map}`;
-
-            // Footer
+            // فوووووتر
             document.getElementById("footerInvest").innerText = t.footer_invest;
             document.getElementById("quickLinksTitle").innerText = t.footer_quick_links;
             document.getElementById("footerHome").innerText = t.nav_home;
@@ -488,19 +466,16 @@
             document.getElementById("followUsTitle").innerText = t.footer_follow_us;
             document.getElementById("followUsText").innerText = t.footer_stay_connected;
             document.getElementById("copyright").innerHTML = `© 2026 Two Grow Academy. ${t.copyright}`;
-
-            // Re-render dynamic content
+            //
             if (window.renderCourses) window.renderCourses(lang);
             if (window.renderTrainers) window.renderTrainers(lang);
             if (window.renderOffers) window.renderOffers(lang);
             if (window.renderTestimonials) window.renderTestimonials(lang);
         }
-
         document.getElementById("langToggle").addEventListener("click", () => {
             const newLang = currentLang === "en" ? "ar" : "en";
             applyLanguage(newLang);
         });
-
         applyLanguage(currentLang);
     </script>
 </body>
