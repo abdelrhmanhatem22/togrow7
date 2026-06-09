@@ -1,4 +1,4 @@
-/* ========== ROOT VARIABLES (DARK MODE DEFAULT) ========== */
+/* ========== متغيرات  ========== */
 :root {
     --bg: #0a1410;
     --bg-2: #0d1a15;
@@ -13,7 +13,7 @@
     --radius: 14px;
 }
 
-/* ========== LIGHT MODE VARIABLES ========== */
+/* ========== مود ========== */
 [data-theme="light"] {
     --bg: #f5faf7;
     --bg-2: #ffffff;
@@ -24,7 +24,6 @@
     --muted: #5a7568;
 }
 
-/* ========== GLOBAL RESET ========== */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -87,7 +86,7 @@ h1, h2, h3, h4, h5 {
     justify-content: center;
 }
 
-/* ========== NAVIGATION ========== */
+/* ========== نافيجشن ========== */
 .nav {
     position: sticky;
     top: 0;
@@ -211,7 +210,7 @@ h1, h2, h3, h4, h5 {
     cursor: pointer;
 }
 
-/* ========== BUTTONS ========== */
+/* ==========  زراير========== */
 .btn {
     display: inline-flex;
     align-items: center;
@@ -253,7 +252,7 @@ h1, h2, h3, h4, h5 {
     color: var(--accent);
 }
 
-/* ========== HERO ========== */
+/* ========== هيرو ========== */
 .hero {
     padding: 60px 0 80px;
     position: relative;
@@ -544,7 +543,7 @@ h1, h2, h3, h4, h5 {
     color: var(--muted);
 }
 
-/* ========== COURSES ========== */
+/* ========== كورسات  ========== */
 .courses-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(240px,1fr));
@@ -612,7 +611,7 @@ h1, h2, h3, h4, h5 {
     margin-top: auto;
 }
 
-/* ========== TRAINERS ========== */
+/* ==========  =======حبره=== */
 .trainers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(220px,1fr));
