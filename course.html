@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
+<!-- هيدر -->
     <header class="nav">
         <div class="container nav-inner">
             <a href="index.html" class="logo">
@@ -37,29 +37,28 @@
             <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
         </div>
     </header>
-
+<!-- كةرس -->
     <main>
         <section class="course-hero" id="courseHero"></section>
         <section class="section">
             <div class="container course-detail" id="courseDetail"></div>
         </section>
     </main>
-
+<!-- فووتر -->
     <footer class="footer">
         <div class="container copyright" id="copyrightFooter">
             © 2026 Two Grow Academy. All Rights Reserved.
         </div>
     </footer>
-
     <script src="data.js"></script>
     <script>
-        // Course detail data
+        // كورسات 
         const params = new URLSearchParams(location.search);
         const slug = params.get("slug");
         const course = COURSES.find(c => c.slug === slug) || COURSES[0];
         document.title = `${course.title} — Two Grow Academy`;
 
-        // Helper to format duration with translation
+        // تنسيق المده مع الترجمه
         function formatDuration(duration, monthsWord) {
             const match = duration.match(/(\d+)\s+(\w+)/);
             if (match && monthsWord) {
@@ -68,13 +67,12 @@
             return duration;
         }
 
-        // Initial render (will be translated later)
+        // العرض الاولي
         function renderCourseContent(lang) {
- // داخل renderCourseContent
+
    const t = TRANSLATIONS[lang];
             const monthsTrans = t?.months || "Months";
             const translatedDuration = formatDuration(course.duration, monthsTrans);
-
             document.getElementById("courseHero").innerHTML = `
                 <div class="container course-hero-inner">
                     <a href="index.html#courses" class="back-link">
@@ -88,17 +86,18 @@
                         <i class="fa-regular fa-clock"></i>
                         ${translatedDuration}
                     </span>
-                    <h1>${course.title}</h1>
-                    <p class="muted lead">${course.short}</p>
+                    <h1>${lang === "ar" ? course.title_ar : course.title}</h1>
+                    <p class="muted lead">${lang === "ar" ? course.short_ar : course.short}</p>
                     <a href="index.html#contact" class="btn btn-primary lg register-btn">${t.register}</a>
                 </div>
             `;
-
             document.getElementById("courseDetail").innerHTML = `
                 <div class="cd-grid">
                     <div>
                         <h2 class="about-heading">${t.about_course}</h2>
-                        <p class="muted about-desc">In our ${course.title} course you will learn step by step, work on real practical projects, and finish with a portfolio.</p>
+                        <p class="muted about-desc">
+                            ${lang === "ar" ? course.about_ar : course.about}
+                        </p>
                         <h3 class="learn-heading">${t.what_you_learn}</h3>
                         <ul class="check-list">
                             <li><i class="fa-solid fa-check"></i> ${t.checklist_items ? t.checklist_items[0] : "Strong foundations and core concepts"}</li>
@@ -143,8 +142,7 @@
                 </div>
             `;
         }
-
-        // Language switching for course page
+        // تبديل لغه صفحات الكرسات
         let currentLang = localStorage.getItem("language") || "en";
 
         function applyCourseLanguage(lang) {
@@ -154,19 +152,16 @@
             document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
             document.getElementById("langText").innerText = lang === "ar" ? "ع" : "EN";
             renderCourseContent(lang);
-
-            // Also translate footer copyright
+            // كوبي رايت
             const t = TRANSLATIONS[lang];
             const copyrightEl = document.getElementById("copyrightFooter");
             if (copyrightEl) copyrightEl.innerHTML = `© 2026 Two Grow Academy. ${t.copyright}`;
         }
-
         document.getElementById("langToggle").addEventListener("click", () => {
             const newLang = currentLang === "en" ? "ar" : "en";
             applyCourseLanguage(newLang);
         });
-
-        // Theme toggle (same as main page)
+        // تبديل تالثيم
         const themeBtn = document.getElementById("themeToggle");
         if (themeBtn) {
             const savedTheme = localStorage.getItem("theme");
@@ -182,7 +177,6 @@
                 themeBtn.innerHTML = isLight ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
             });
         }
-
         applyCourseLanguage(currentLang);
     </script>
 </body>
