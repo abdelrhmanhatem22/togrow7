@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course — Two Grow Academy</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="index.html" class="logo">
+                <span class="logo-mark"><i class="fa-solid fa-cube"></i></span>
+                <span class="logo-text">TO GROW<small>ACADEMY</small></span>
+            </a>
+            <nav class="nav-links">
+                <a href="index.html#home">Home</a>
+                <a href="index.html#about">About</a>
+                <a href="index.html#courses" class="active">Courses</a>
+                <a href="index.html#trainers">Trainers</a>
+                <a href="index.html#offers">Offers</a>
+                <a href="index.html#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="index.html#contact" class="btn btn-primary" id="registerNavBtn">Register Now</a>
+            </div>
+            <button class="menu-btn" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
+        </div>
+    </header>
+
+    <main>
+        <section class="course-hero" id="courseHero"></section>
+        <section class="section">
+            <div class="container course-detail" id="courseDetail"></div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container copyright" id="copyrightFooter">
+            © 2026 Two Grow Academy. All Rights Reserved.
+        </div>
+    </footer>
+
+    <script src="data.js"></script>
+    <script>
+        // Course detail data
+        const params = new URLSearchParams(location.search);
+        const slug = params.get("slug");
+        const course = COURSES.find(c => c.slug === slug) || COURSES[0];
+        document.title = `${course.title} — Two Grow Academy`;
+
+        // Helper to format duration with translation
+        function formatDuration(duration, monthsWord) {
+            const match = duration.match(/(\d+)\s+(\w+)/);
+            if (match && monthsWord) {
+                return `${match[1]} ${monthsWord}`;
+            }
+            return duration;
+        }
+
+        // Initial render (will be translated later)
+        function renderCourseContent(lang) {
+ // داخل renderCourseContent
+   const t = TRANSLATIONS[lang];
+            const monthsTrans = t?.months || "Months";
+            const translatedDuration = formatDuration(course.duration, monthsTrans);
+
+            document.getElementById("courseHero").innerHTML = `
+                <div class="container course-hero-inner">
+                    <a href="index.html#courses" class="back-link">
+                        <i class="fa-solid fa-arrow-left"></i>
+                        <span class="back-text">${t.back_to_courses}</span>
+                    </a>
+                    <div class="course-hero-icon">
+                        <i class="fa-solid ${course.icon}"></i>
+                    </div>
+                    <span class="badge">
+                        <i class="fa-regular fa-clock"></i>
+                        ${translatedDuration}
+                    </span>
+                    <h1>${course.title}</h1>
+                    <p class="muted lead">${course.short}</p>
+                    <a href="index.html#contact" class="btn btn-primary lg register-btn">${t.register}</a>
+                </div>
+            `;
+
+            document.getElementById("courseDetail").innerHTML = `
+                <div class="cd-grid">
+                    <div>
+                        <h2 class="about-heading">${t.about_course}</h2>
+                        <p class="muted about-desc">In our ${course.title} course you will learn step by step, work on real practical projects, and finish with a portfolio.</p>
+                        <h3 class="learn-heading">${t.what_you_learn}</h3>
+                        <ul class="check-list">
+                            <li><i class="fa-solid fa-check"></i> ${t.checklist_items ? t.checklist_items[0] : "Strong foundations and core concepts"}</li>
+                            <li><i class="fa-solid fa-check"></i> ${t.checklist_items ? t.checklist_items[1] : "Hands-on practice with real projects"}</li>
+                            <li><i class="fa-solid fa-check"></i> ${t.checklist_items ? t.checklist_items[2] : "Tools used by professionals"}</li>
+                            <li><i class="fa-solid fa-check"></i> ${t.checklist_items ? t.checklist_items[3] : "Best practices and career tips"}</li>
+                            <li><i class="fa-solid fa-check"></i> ${t.checklist_items ? t.checklist_items[4] : "Final project added to your portfolio"}</li>
+                        </ul>
+                    </div>
+                    <aside class="cd-side">
+                        <h4 class="info-heading">${t.course_info}</h4>
+                        <div class="cd-row">
+                            <i class="fa-regular fa-clock"></i>
+                            <div>
+                                <small class="duration-label">${t.duration_label}</small>
+                                <strong>${translatedDuration}</strong>
+                            </div>
+                        </div>
+                        <div class="cd-row">
+                            <i class="fa-solid fa-signal"></i>
+                            <div>
+                                <small class="level-label">${t.level_label}</small>
+                                <strong class="level-value">${t.level_value}</strong>
+                            </div>
+                        </div>
+                        <div class="cd-row">
+                            <i class="fa-solid fa-certificate"></i>
+                            <div>
+                                <small class="cert-label">${t.certificate_label}</small>
+                                <strong class="cert-value">${t.certificate_value}</strong>
+                            </div>
+                        </div>
+                        <div class="cd-row">
+                            <i class="fa-solid fa-people-group"></i>
+                            <div>
+                                <small class="format-label">${t.format_label}</small>
+                                <strong class="format-value">${t.format_value}</strong>
+                            </div>
+                        </div>
+                        <a href="index.html#contact" class="btn btn-primary w-full register-side-btn">${t.register}</a>
+                    </aside>
+                </div>
+            `;
+        }
+
+        // Language switching for course page
+        let currentLang = localStorage.getItem("language") || "en";
+
+        function applyCourseLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem("language", lang);
+            document.documentElement.setAttribute("lang", lang === "ar" ? "ar" : "en");
+            document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+            document.getElementById("langText").innerText = lang === "ar" ? "ع" : "EN";
+            renderCourseContent(lang);
+
+            // Also translate footer copyright
+            const t = TRANSLATIONS[lang];
+            const copyrightEl = document.getElementById("copyrightFooter");
+            if (copyrightEl) copyrightEl.innerHTML = `© 2026 Two Grow Academy. ${t.copyright}`;
+        }
+
+        document.getElementById("langToggle").addEventListener("click", () => {
+            const newLang = currentLang === "en" ? "ar" : "en";
+            applyCourseLanguage(newLang);
+        });
+
+        // Theme toggle (same as main page)
+        const themeBtn = document.getElementById("themeToggle");
+        if (themeBtn) {
+            const savedTheme = localStorage.getItem("theme");
+            if (savedTheme === "light") {
+                document.documentElement.setAttribute("data-theme", "light");
+                themeBtn.innerHTML = '<i class="fa-solid fa-sun"></i>';
+            }
+            themeBtn.addEventListener("click", () => {
+                const isLight = document.documentElement.getAttribute("data-theme") === "light";
+                const newTheme = isLight ? "dark" : "light";
+                document.documentElement.setAttribute("data-theme", newTheme);
+                localStorage.setItem("theme", newTheme);
+                themeBtn.innerHTML = isLight ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
+            });
+        }
+
+        applyCourseLanguage(currentLang);
+    </script>
+</body>
+</html>

@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Two Grow Academy — Start Your Future</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- ========== HEADER ========== -->
+    <header class="nav">
+        <div class="container nav-inner">
+            <a href="#home" class="logo">
+                <span class="logo-mark">
+                    <i class="fa-solid fa-cube"></i>
+                </span>
+                <span class="logo-text">
+                    TO GROW
+                    <small>ACADEMY</small>
+                </span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#courses">Courses</a>
+                <a href="#trainers">Trainers</a>
+                <a href="#offers">Offers</a>
+                <a href="#projects">Projects</a>
+                <a href="#graduation">Graduation</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <button class="lang-toggle" id="langToggle">
+                    <i class="fa-solid fa-globe"></i>
+                    <span id="langText">EN</span>
+                </button>
+                <button class="theme-toggle" id="themeToggle">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="#contact" class="btn btn-primary" id="registerNavBtn">
+                    <span id="registerBtnText">Register Now</span>
+                    <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            <button class="menu-btn" id="menuBtn">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========== HERO ========== -->
+        <section class="hero" id="home">
+            <div class="container hero-grid">
+                <div class="hero-text">
+                    <span class="badge">
+                        <i class="fa-solid fa-rocket"></i>
+                        WELCOME TO TWO GROW ACADEMY
+                    </span>
+                    <h1>
+                        START YOUR FUTURE WITH
+                        <span class="accent">TO GROW ACADEMY</span>
+                    </h1>
+                    <p>
+                        An educational academy that helps you build practical skills, develop your talents,
+                        and start a successful career through professional courses by expert trainers.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#contact" class="btn btn-primary lg">Register Now</a>
+                        <a href="#courses" class="btn btn-outline lg">View Courses</a>
+                    </div>
+                    <div class="students">
+                        <div class="avatars">
+                            <img src="WhatsApp Image 2026-06-08 at 4.37.13 AM.jpeg" alt="">
+                            <img src="WhatsApp Image 2026-06-08 at 4.41.18 AM.jpeg" alt="">
+                            <img src="WhatsApp Image 2026-06-08 at 4.44.14 AM.jpeg" alt="">
+                            <img src="WhatsApp Image 2026-06-08 at 4.46.30 AM.jpeg" alt="">
+                        </div>
+                        <div>
+                            <strong class="accent">5,000+ Students</strong>
+                            <p>are already growing with us</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual">
+                    <img src="WhatsApp Image 2026-06-06 at 9.01.45 AM.jpeg" alt="Two Grow hero">
+                    <div class="float-card f1">
+                        <i class="fa-solid fa-code"></i>
+                        <span>Front-End<br>Development</span>
+                    </div>
+                    <div class="float-card f2">
+                        <i class="fa-solid fa-pen-ruler"></i>
+                        <span>Graphic<br>Design</span>
+                    </div>
+                    <div class="float-card f3">
+                        <i class="fa-solid fa-bullhorn"></i>
+                        <span>Digital<br>Marketing</span>
+                    </div>
+                    <div class="float-card f4">
+                        <i class="fa-solid fa-brain"></i>
+                        <span>Artificial<br>Intelligence</span>
+                    </div>
+                    <div class="float-card f5">
+                        <i class="fa-solid fa-film"></i>
+                        <span>Reels<br>Maker</span>
+                    </div>
+                    <div class="float-card f6">
+                        <i class="fa-solid fa-comments"></i>
+                        <span>English<br>Courses</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== ABOUT ========== -->
+        <section class="section" id="about">
+            <div class="container">
+                <div class="about-head">
+                    <h1 style="color: #22c55e;">— ABOUT THE ACADEMY</h1>
+                    <h2>About <span class="accent">To Grow Academy</span></h2>
+                    <p class="muted lead">
+                        To Grow Academy is a leading educational academy that offers high-quality courses
+                        in technology, design, marketing, and languages. We empower our students with
+                        practical skills and real-world projects.
+                    </p>
+                </div>
+                <div class="about-grid">
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fa-solid fa-eye"></i></div>
+                        <h3 id="visionTitle">Our Vision</h3>
+                        <p id="visionDesc">To become the leading educational academy in the region, building a generation of professionals.</p>
+                    </div>
+                    <div class="about-card">
+                        <div class="about-icon"><i class="fa-solid fa-bullseye"></i></div>
+                        <h3 id="missionTitle">Our Mission</h3>
+                        <p id="missionDesc">To deliver high-quality, practical education through expert trainers and real projects.</p>
+                    </div>
+                    <div class="about-card highlight">
+                        <div class="about-icon"><i class="fa-solid fa-trophy"></i></div>
+                        <h3 id="whyTitle">Why Two Grow?</h3>
+                        <p id="whyDesc">Expert trainers, practical projects, recognized certificates, and a strong community.</p>
+                    </div>
+                </div>
+                <div class="stats">
+                    <div class="stat">
+                        <i class="fa-solid fa-book-open"></i>
+                        <div>
+                            <h3>7+</h3>
+                            <p id="statCourses">Courses Available</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fa-solid fa-chalkboard-user"></i>
+                        <div>
+                            <h3>15+</h3>
+                            <p id="statTrainers">Expert Trainers</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fa-solid fa-users"></i>
+                        <div>
+                            <h3>5,000+</h3>
+                            <p id="statStudents">Happy Students</p>
+                        </div>
+                    </div>
+                    <div class="stat">
+                        <i class="fa-solid fa-award"></i>
+                        <div>
+                            <h3>98%</h3>
+                            <p id="statSuccess">Success Rate</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========== COURSES ========== -->
+        <section class="section section-alt" id="courses">
+            <div class="container">
+                <div class="section-head center">
+                    <h1 id="coursesBadge" style="color: #22c55e;">— OUR COURSES</h1>
+                    <h2 id="coursesTitle"> Our Courses</h2>
+                    <p id="coursesDesc" class="muted">Choose from a wide range of professional courses.</p>
+                </div>
+                <div class="courses-grid" id="coursesGrid"></div>
+            </div>
+        </section>
+
+        <!-- ========== TRAINERS ========== -->
+        <section class="section" id="trainers">
+            <div class="container">
+                <div class="section-head center">
+                    <h1 id="trainersBadge" style="color: #22c55e;">— MEET THE TEAM</h1>
+                    <h2 id="trainersTitle">Our Expert Trainers</h2>
+                    <p id="trainersDesc" class="muted">Learn from industry professionals.</p>
+                </div>
+                <div class="trainers-grid" id="trainersGrid"></div>
+            </div>
+        </section>
+
+        <!-- ========== OFFERS ========== -->
+        <section class="section section-alt" id="offers">
+            <div class="container">
+                <div class="section-head center">
+                    <h1 id="offersBadge" style="color:#22c55e;">— LIMITED TIME</h1>
+                    <h2 id="offersTitle">Current Offers & Discounts</h2>
+                    <p id="offersDesc" class="muted">Grab the best deals on our most popular courses.</p>
+                </div>
+                <div class="offers-grid" id="offersGrid"></div>
+            </div>
+        </section>
+
+        <!-- ========== PROJECTS ========== -->
+        <section class="section" id="projects">
+            <div class="container">
+                <div class="section-head center">
+                    <h1 id="projectsBadge" style="color: #22c55e;">— STUDENT WORK</h1>
+                    <h2 id="projectsTitle">Student Projects</h2>
+                    <p id="projectsDesc" class="muted">Real projects built by our talented students.</p>
+                </div>
+                <div class="tabs" id="projectTabs"></div>
+                <div class="gallery" id="projectGallery"></div>
+            </div>
+        </section>
+
+        <!-- ========== GRADUATION ========== -->
+        <section class="section section-alt" id="graduation">
+            <div class="container">
+                <div class="section-head center">
+                    <h1 id="gradBadge" style="color: #22c55e;">— CELEBRATING SUCCESS</h1>
+                    <h2 id="gradTitle">Graduation Ceremonies</h2>
+                    <p id="gradDesc" class="muted">Memories from our graduation ceremonies.</p>
+                </div>
+                <div class="tabs" id="gradTabs"></div>
+                <div class="gallery" id="gradGallery"></div>
+            </div>
+        </section>
+
+<!-- ========== TESTIMONIALS SECTION ========== -->
+<section class="section" id="testimonials">
+    <div class="container">
+        <div class="section-head center">
+            <h1 id="testiBadge" style="color: #22c55e;">— WHAT STUDENTS SAY</h1>
+            <h2 id="testiTitle">Student Testimonials</h2>
+        </div>
+        <div class="testi-slider">
+            <div class="testi-track" id="testiTrack"></div>
+            <div class="testi-controls">
+                <button id="testiPrev"><i class="fa-solid fa-chevron-left"></i></button>
+                <div class="testi-dots" id="testiDots"></div>
+                <button id="testiNext"><i class="fa-solid fa-chevron-right"></i></button>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- ========== CONTACT ========== -->
+        <section class="section section-alt" id="contact">
+            <div class="container">
+                <div class="section-head center">
+                    <h1 id="contactBadge" style="color: #22c55e;">— GET IN TOUCH</h1>
+                    <h2 id="contactTitle">Contact Us</h2>
+                    <p id="contactDesc" class="muted">Have a question? Send us a message.</p>
+                </div>
+                <div class="contact-grid">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-row">
+                            <div class="field">
+                                <label id="nameLabel">Name</label>
+                                <input type="text" name="name" id="nameInput" required placeholder="Your full name">
+                            </div>
+                            <div class="field">
+                                <label id="phoneLabel">Phone</label>
+                                <input type="tel" name="phone" id="phoneInput" required placeholder="01xxxxxxxxx">
+                            </div>
+                        </div>
+                        <div class="field">
+                            <label id="emailLabel">Email</label>
+                            <input type="email" name="email" id="emailInput" required placeholder="you@example.com">
+                        </div>
+                        <div class="field">
+                            <label id="msgLabel">Message</label>
+                            <textarea name="message" id="msgInput" rows="5" required placeholder="How can we help you?"></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary lg" id="sendBtn">
+                            Send Message
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                    <div class="contact-info">
+                        <div class="info-card">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div>
+                                <h4 id="addressTitle">Address</h4>
+                                <p id="addressText">City Center Mall, New Nozha — next to Hisham Barakat Metro, Building B, 3rd Floor</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fa-solid fa-phone"></i>
+                            <div>
+                                <h4 id="phoneTitle">Phone</h4>
+                                <p>+20 10631959973</p>
+                            </div>
+                        </div>
+                        <div class="info-card">
+                            <i class="fa-solid fa-envelope"></i>
+                            <div>
+                                <h4 id="emailTitle">Email</h4>
+                                <p>info@twogrowacademy.com</p>
+                            </div>
+                        </div>
+                        <a class="map-link" href="https://maps.app.goo.gl/bx8QfkFLDivVn9zf8?g_st=ic" target="_blank">
+                            <iframe src="https://www.google.com/maps?q=City+Center+Mall+New+Nozha+Cairo&output=embed" loading="lazy"></iframe>
+                            <span class="map-overlay" id="mapOverlay">
+                                <i class="fa-solid fa-up-right-from-square"></i>
+                                Open in Google Maps
+                            </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========== FOOTER ========== -->
+    <footer class="footer">
+        <div class="container footer-grid">
+            <div>
+                <a href="#home" class="logo">
+                    <span class="logo-mark"><i class="fa-solid fa-cube"></i></span>
+                    <span class="logo-text">TWO GROW<small>ACADEMY</small></span>
+                </a>
+                <p class="muted" id="footerInvest">
+                    Invest in yourself. Learn practical skills, build real projects, and start the career you deserve.
+                </p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/share/1JJBMWchsM/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/togrowacademy00?igsh=ZWs3ZHUzNDdpcGwx"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@togrowacedemy?_r=1&_t=ZS-971z38OtLVp"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="2010631959973"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            <div>
+                <h5 id="quickLinksTitle">Quick Links</h5>
+                <a href="#home" id="footerHome">Home</a>
+                <a href="#courses" id="footerCourses">Courses</a>
+                <a href="#trainers" id="footerTrainers">Trainers</a>
+                <a href="#offers" id="footerOffers">Offers</a>
+                <a href="#contact" id="footerContact">Contact</a>
+            </div>
+            <div>
+                <h5 id="contactInfoTitle">Contact Info</h5>
+                <a href="tel:+2010631959973"><i class="fa-solid fa-phone"></i> +20 106 319 59973</a>
+                <a href="mailto:info@twogrowacademy.com"><i class="fa-solid fa-envelope"></i> info@twogrowacademy.com</a>
+                <a href="#" id="footerAddressLink"><i class="fa-solid fa-location-dot"></i> City Center Mall, New Nozha</a>
+            </div>
+            <div>
+                <h5 id="followUsTitle">Follow Us</h5>
+                <p class="muted" id="followUsText">Stay connected with the academy on social media.</p>
+                <div class="socials">
+                    <a href="https://www.facebook.com/share/1JJBMWchsM/"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/togrowacademy00?igsh=ZWs3ZHUzNDdpcGwx"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.tiktok.com/@togrowacedemy?_r=1&_t=ZS-971z38OtLVp"><i class="fa-brands fa-tiktok"></i></a>
+                    <a href="https://wa.me/201000000000"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="copyright" id="copyright">
+            © 2026 Two Grow Academy. All Rights Reserved.
+        </div>
+        <button class="to-top" id="toTop">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lb-close" id="lbClose"><i class="fa-solid fa-xmark"></i></button>
+        <div class="lb-content" id="lbContent"></div>
+    </div>
+
+    <script src="data.js"></script>
+    <script src="main.js"></script>
+    <script>
+        // Language switching logic (full translation)
+        let currentLang = localStorage.getItem("language") || "en";
+        const translations = TRANSLATIONS;
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem("language", lang);
+            document.documentElement.setAttribute("lang", lang === "ar" ? "ar" : "en");
+            document.documentElement.setAttribute("dir", lang === "ar" ? "rtl" : "ltr");
+            document.getElementById("langText").innerText = lang === "ar" ? "ع" : "EN";
+
+            const t = translations[lang];
+
+            // Navbar
+            const navLinks = document.querySelectorAll(".nav-links a");
+            navLinks[0].innerText = t.nav_home;
+            navLinks[1].innerText = t.nav_about;
+            navLinks[2].innerText = t.nav_courses;
+            navLinks[3].innerText = t.nav_trainers;
+            navLinks[4].innerText = t.nav_offers;
+            navLinks[5].innerText = t.nav_projects;
+            navLinks[6].innerText = t.nav_graduation;
+            navLinks[7].innerText = t.nav_contact;
+            document.getElementById("registerBtnText").innerText = t.register_btn;
+
+            // Hero
+            document.querySelector(".hero-text .badge").innerHTML = `<i class="fa-solid fa-rocket"></i> ${t.hero_badge}`;
+            document.querySelector(".hero-text h1").innerHTML = `${t.hero_title} <span class="accent">${t.hero_title_accent}</span>`;
+            document.querySelector(".hero-text > p").innerText = t.hero_desc;
+            document.querySelector(".hero-cta .btn-primary").innerHTML = `${t.register_btn_hero} <i class="fa-solid fa-arrow-right"></i>`;
+            document.querySelector(".hero-cta .btn-outline").innerText = t.view_courses_btn;
+            document.querySelector(".students strong").innerHTML = `5,000+ ${t.students_count}`;
+            document.querySelector(".students p").innerText = t.students_label;
+
+            // About
+            document.querySelector("#about .about-head h1").innerHTML = t.about_badge;
+            document.querySelector("#about .about-head h2").innerHTML = `${t.about_title} <span class="accent">${t.about_title_accent}</span>`;
+            document.querySelector("#about .about-head .lead").innerText = t.about_desc;
+            document.getElementById("visionTitle").innerText = t.vision_title;
+            document.getElementById("visionDesc").innerText = t.vision_desc;
+            document.getElementById("missionTitle").innerText = t.mission_title;
+            document.getElementById("missionDesc").innerText = t.mission_desc;
+            document.getElementById("whyTitle").innerText = t.why_title;
+            document.getElementById("whyDesc").innerText = t.why_desc;
+
+            // Stats
+            document.getElementById("statCourses").innerText = t.courses_available;
+            document.getElementById("statTrainers").innerText = t.expert_trainers;
+            document.getElementById("statStudents").innerText = t.happy_students;
+            document.getElementById("statSuccess").innerText = t.success_rate;
+
+            // Section headers
+            document.getElementById("coursesBadge").innerHTML = t.courses_section_badge;
+            document.getElementById("coursesTitle").innerText = t.courses_section_title;
+            document.getElementById("coursesDesc").innerText = t.courses_section_desc;
+            document.getElementById("trainersBadge").innerHTML = t.trainers_section_badge;
+            document.getElementById("trainersTitle").innerText = t.trainers_section_title;
+            document.getElementById("trainersDesc").innerText = t.trainers_section_desc;
+            document.getElementById("offersBadge").innerHTML = t.offers_section_badge;
+            document.getElementById("offersTitle").innerText = t.offers_section_title;
+            document.getElementById("offersDesc").innerText = t.offers_section_desc;
+            document.getElementById("projectsBadge").innerHTML = t.projects_section_badge;
+            document.getElementById("projectsTitle").innerText = t.projects_section_title;
+            document.getElementById("projectsDesc").innerText = t.projects_section_desc;
+            document.getElementById("gradBadge").innerHTML = t.graduation_section_badge;
+            document.getElementById("gradTitle").innerText = t.graduation_section_title;
+            document.getElementById("gradDesc").innerText = t.graduation_section_desc;
+            document.getElementById("testiBadge").innerHTML = t.testimonials_section_badge;
+            document.getElementById("testiTitle").innerText = t.testimonials_section_title;
+            document.getElementById("contactBadge").innerHTML = t.contact_section_badge;
+            document.getElementById("contactTitle").innerText = t.contact_section_title;
+            document.getElementById("contactDesc").innerText = t.contact_section_desc;
+
+            // Contact form labels & placeholders
+            document.getElementById("nameLabel").innerText = t.contact_name;
+            document.getElementById("phoneLabel").innerText = t.contact_phone;
+            document.getElementById("emailLabel").innerText = t.contact_email;
+            document.getElementById("msgLabel").innerText = t.contact_message;
+            document.getElementById("nameInput").placeholder = t.contact_name_placeholder;
+            document.getElementById("phoneInput").placeholder = t.contact_phone_placeholder;
+            document.getElementById("emailInput").placeholder = t.contact_email_placeholder;
+            document.getElementById("msgInput").placeholder = t.contact_message_placeholder;
+            document.getElementById("sendBtn").innerHTML = `${t.send_btn} <i class="fa-solid fa-paper-plane"></i>`;
+            document.getElementById("addressTitle").innerText = t.address_title;
+            document.getElementById("addressText").innerText = t.address_text;
+            document.getElementById("phoneTitle").innerText = t.phone_title;
+            document.getElementById("emailTitle").innerText = t.email_title;
+            document.getElementById("mapOverlay").innerHTML = `<i class="fa-solid fa-up-right-from-square"></i> ${t.open_map}`;
+
+            // Footer
+            document.getElementById("footerInvest").innerText = t.footer_invest;
+            document.getElementById("quickLinksTitle").innerText = t.footer_quick_links;
+            document.getElementById("footerHome").innerText = t.nav_home;
+            document.getElementById("footerCourses").innerText = t.nav_courses;
+            document.getElementById("footerTrainers").innerText = t.nav_trainers;
+            document.getElementById("footerOffers").innerText = t.nav_offers;
+            document.getElementById("footerContact").innerText = t.nav_contact;
+            document.getElementById("contactInfoTitle").innerText = t.footer_contact_info;
+            document.getElementById("footerAddressLink").innerHTML = `<i class="fa-solid fa-location-dot"></i> ${t.address_text}`;
+            document.getElementById("followUsTitle").innerText = t.footer_follow_us;
+            document.getElementById("followUsText").innerText = t.footer_stay_connected;
+            document.getElementById("copyright").innerHTML = `© 2026 Two Grow Academy. ${t.copyright}`;
+
+            // Re-render dynamic content
+            if (window.renderCourses) window.renderCourses(lang);
+            if (window.renderTrainers) window.renderTrainers(lang);
+            if (window.renderOffers) window.renderOffers(lang);
+            if (window.renderTestimonials) window.renderTestimonials(lang);
+        }
+
+        document.getElementById("langToggle").addEventListener("click", () => {
+            const newLang = currentLang === "en" ? "ar" : "en";
+            applyLanguage(newLang);
+        });
+
+        applyLanguage(currentLang);
+    </script>
+</body>
+</html>
