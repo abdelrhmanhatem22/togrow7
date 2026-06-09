@@ -1,43 +1,39 @@
-// ============================================================
-// COURSES DATA
-// ============================================================
-// COURSES DATA
-// ============================================================
+// كوؤسات 
 const COURSES = [
 {
     slug: "programming",
-
     title: "Programming · Front-End",
     title_ar: "برمجة الواجهات الأمامية",
-
     icon: "fa-code",
-
     duration: "3 Months",
-
     short: "HTML, CSS, JavaScript . Build real websites from scratch.",
-
     short_ar: "تعلم HTML و CSS و JavaScript وإنشاء مواقع ويب حقيقية من الصفر.",
-
+    about: "Learn Front-End development step by step and build real projects for your portfolio.",
+    about_ar: "تعلم تطوير الواجهات الأمامية خطوة بخطوة وقم بتنفيذ مشاريع حقيقية لإضافتها إلى معرض أعمالك.",
     img: "course-programming (1).jpg"
 },
     {
         slug: "graphic-design",
         title: "Graphic Design",
-        title_ar: "تصميم جرافيكي",
+        title_ar: " جرافيك ديزاين",
         icon: "fa-pen-ruler",
         duration: "3 Months",
         short: "Photoshop, Illustrator and design principles for stunning visuals.",
         short_ar: "تعلم Photoshop و Illustrator ومبادئ التصميم لإنشاء صور مذهلة.",
+        about: "Master graphic design using Photoshop, Illustrator, and modern design principles. Create professional branding, social media designs, and marketing materials.",
+    about_ar: "أتقن التصميم الجرافيكي باستخدام Photoshop و Illustrator ومبادئ التصميم الحديثة، مع تنفيذ هويات بصرية وتصميمات سوشيال ميديا وأعمال تسويقية احترافية.",
         img:"course-graphic-design.jpg"
     },
     {
         slug: "digital-marketing",
         title: "Digital Marketing",
-        title_ar: "تسويق رقمي",
+        title_ar: "تسويق الكتروني",
         icon: "fa-bullhorn",
         duration: "3 Months",
         short: "Social media, ads, SEO and content strategy to grow any brand.",
         short_ar: "تعلم وسائل التواصل الاجتماعي والإعلانات و SEO Estrategy لنمو أي علامة تجارية.",
+        about: "Learn social media marketing, paid advertising, SEO, content creation, and marketing strategies to grow businesses and brands online.",
+    about_ar: "تعلم التسويق عبر وسائل التواصل الاجتماعي والإعلانات الممولة وSEO وصناعة المحتوى والاستراتيجيات التسويقية لتنمية الشركات والعلامات التجارية عبر الإنترنت.",
         img:"course-digital-marketing (1).jpg"
     },
     {
@@ -48,6 +44,8 @@ const COURSES = [
         duration: "4 Months",
         short: "Practical English to speak, write and communicate with confidence.",
         short_ar: "تعلم الإنجليزية بشكل عملي للتحدث والكتابة والتواصل بثقة.",
+        about: "Improve your English speaking, listening, reading, and writing skills through practical lessons and real-life conversations.",
+        about_ar: "طوّر مهارات التحدث والاستماع والقراءة والكتابة باللغة الإنجليزية من خلال دروس عملية ومحادثات واقعية تساعدك على اكتساب الثقة والطلاقة.",
         img:"course-english.jpg"
     },
     {
@@ -58,16 +56,20 @@ const COURSES = [
         duration: "4 Months",
         short: "For learners ready to master fluency, IELTS prep and pro-level skills.",
         short_ar: "للمتعلمين المستعدين لمواصلة اللباقة، وإعداد IELTS المهارات على مستوى المحترفين.",
+        about: "Enhance your fluency, pronunciation, advanced grammar, and communication skills for academic and professional environments.",
+        about_ar: "طوّر مستوى الطلاقة والنطق والقواعد المتقدمة ومهارات التواصل باللغة الإنجليزية للاستخدام الأكاديمي والمهني.",
         img:"course-advanced-english (1).jpg"
     },
     {
         slug: "reels-maker",
         title: "Reels Maker",
-        title_ar: "صانع ريلز",
+        title_ar: "صانع محتوي",
         icon: "fa-film",
         duration: "3 Month",
         short: "Shoot, edit and publish viral short videos for Instagram & TikTok.",
         short_ar: "التقاط، تحرير ونشر مقاطع فيديو قصيرة شهيرة لـ Instagram & TikTok.",
+        about: "Learn how to create engaging reels and short-form videos using professional editing techniques, storytelling, and social media trends.",
+        about_ar: "تعلم صناعة الريلز والفيديوهات القصيرة باستخدام تقنيات المونتاج الاحترافية والسرد القصصي وأحدث اتجاهات وسائل التواصل الاجتماعي.",
         img:"course-reel-maker.jpg"
     },
     {
@@ -78,14 +80,14 @@ const COURSES = [
         duration: "3 Months",
         short: "Use AI tools, prompt engineering and automate your work like a pro.",
         short_ar: "استخدم أدوات الذكاء الاصطناعي، وهندسة المطالبات وأتمتة عملك مثل محترف.",
+        about: "Explore Artificial Intelligence, prompt engineering, AI tools, automation, and practical applications that improve productivity and business growth.",
+        about_ar: "استكشف الذكاء الاصطناعي وهندسة الأوامر وأدوات الذكاء الاصطناعي والأتمتة والتطبيقات العملية التي تساعد على زيادة الإنتاجية وتطوير الأعمال.",
         img:"course-ai.jpg"
     }
 ];
 
+// حبراء
 
-// ============================================================
-// TRAINERS DATA (10 Trainers with Arabic/English)
-// ============================================================
 const TRAINERS = [
     {
         name: "Aya Alaasar",
@@ -93,7 +95,11 @@ const TRAINERS = [
         role_ar: "مدربه فرونت إند",
         bio_en: "Senior Front-End Engineer with 7+ years building production web apps.",
         bio_ar: "مهندس فرونت إند خبير لمدة 7+ سنوات في بناء تطبيقات ويب احترافية.",
-        img: ""
+        img: "",
+        facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
     {
         name: "Alhassan Ahmed",
@@ -101,7 +107,11 @@ const TRAINERS = [
         role_ar: "مدرب الجرافيك",
         bio_en: "Graphic engineer with 4 years of experience in creating professional designs",
         bio_ar: "مهندس جرافيك خبره لمده 4سنوات في بناء تصاميم احترافيه",
-        img: ""
+        img: "",
+        facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
     {
         name: "Mohamed alsawy",
@@ -109,7 +119,11 @@ const TRAINERS = [
         role_ar: "خبير تسويق رقمي ",
         bio_en: "Performance marketer specialised in Meta & Google ads with proven ROI.",
         bio_ar: "مسوق أداء متخصص في إعلانات ميتا وجوجل مع عائد استثمار مثبت.",
-        img: ""
+        img: "",
+        facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
     {
         name: "Aya Amr",
@@ -117,7 +131,11 @@ const TRAINERS = [
         role_ar: "مدربة لغة إنجليزية",
         bio_en: "Certified TEFL instructor passionate about helping learners speak fluently.",
         bio_ar: "مدربة معتمدة في تدريس الإنجليزية كلغة أجنبية، شغوفة بمساعدة المتعلمين على التحدث بطلاقة.",
-        img: ""
+        img: "",
+        facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
     {
         name: "Aya Elaasar",
@@ -125,7 +143,11 @@ const TRAINERS = [
         role_ar: "أخصائيه ذكاء اصطناعي",
         bio_en: "AI engineer focused on practical AI tools and automation for daily work.",
         bio_ar: "مهندسه ذكاء اصطناعي تركز على أدوات الذكاء الاصطناعي العملية وأتمتة العمل اليومي.",
-        img: ""
+        img: "",
+        facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
     {
         name: "Yousef Mohamed",
@@ -133,7 +155,10 @@ const TRAINERS = [
         role_ar: "مونتير فيديوهات وريلز",
         bio_en: "Short-video creator with millions of views across TikTok & Instagram.",
         bio_ar: "صانع محتوى فيديوهات قصيرة بملايين المشاهدات على تيك توك وإنستغرام.",
-        img: ""
+        img: "", facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
     {
         name: "Bishoy Elgamil",
@@ -141,79 +166,87 @@ const TRAINERS = [
         role_ar:"خبير لغه انجليزيه",
         bio_en: "Certified TEFL instructor passionate about helping learners speak fluently.",
         bio_ar: "مدرب معتمد في تدريس الإنجليزية كلغة أجنبية، شغوف بمساعدة المتعلمين على التحدث بطلاقة.",
-        img: ""
+        img: "",
+        facebook: "",
+        instagram: "",
+        tiktok: "",
+        whatsapp: ""
     },
-
-
-
 ];
-
-// ============================================================
-// OFFERS DATA (7 Offers)
-// ============================================================
+// اوفرات 
 const OFFERS = [
     {
         course: "Front-End Development",
-        
+        course_ar: "تطوير واجهات المستخدم",
         discount: 65,
         oldPrice: 6600,
         newPrice: 2200,
         duration: "Ends in 7 days",
+        duration_ar: "ينتهي خلال 7 أيام",
         img: "discount-programming.jpg"
     },
     {
         course: "Graphic Design",
+        course_ar: "تصميم جرافيك",
         discount: 65,
         oldPrice: 6600,
         newPrice: 2200,
         duration: "Ends in 5 days",
+        duration_ar: "ينتهي خلال 5 أيام",
         img: "discount-graphic-design.jpg"
     },
     {
         course: "Digital Marketing",
+        course_ar: "التسويق الرقمي",
         discount: 65,
         oldPrice: 6600,
         newPrice: 2200,
         duration: "Ends in 3 days",
+        duration_ar: "ينتهي خلال 3 أيام",
         img: "discount-digital-marketing.jpg"
     },
     {
         course: "Artificial Intelligence",
+        course_ar: "الذكاء الاصطناعي",
         discount: 65,
         oldPrice: 6600,
         newPrice: 2200,
         duration: "Ends in 10 days",
+        duration_ar: "ينتهي خلال 10 أيام",
         img: "discount-ai (2).jpg"
     },
     {
         course: "English Course",
+        course_ar: "دورة اللغة الإنجليزية",
         discount: 65,
         oldPrice: 7200,
         newPrice: 2600,
         duration: "Ends in 12 days",
+        duration_ar: "ينتهي خلال 12 يوم",
         img: "discount-english (1).jpg"
     },
     {
         course: "Reels Maker",
+        course_ar: "صانع محتوي",
         discount: 65,
         oldPrice: 6600,
         newPrice: 2200,
         duration: "Ends in 4 days",
+        duration_ar: "ينتهي خلال 4 أيام",
         img: "discount-reel-maker.jpg"
     },
     {
         course: "Advanced English",
+        course_ar: "اللغة الإنجليزية المتقدمة",
         discount: 65,
         oldPrice: 7200,
         newPrice: 3000,
         duration: "Ends in 8 days",
+        duration_ar: "ينتهي خلال 8 أيام",
         img: "discount-advanced-english.jpg"
     }
 ];
-
-// ============================================================
-// PROJECTS DATA (More Projects)
-// ============================================================
+// مشاريع
 const PROJECTS = {
     "Programming": [
         { type: "video", src: "Food Website - Profile 1 - Microsoft​ Edge 2026-04-26 00-22-36.mp4", title: "Food Website" },
@@ -245,10 +278,7 @@ const PROJECTS = {
         { type: "video", src: "WhatsApp Video 2026-06-08 at 11.08.04 AM.mp4", title: "" }
     ]
 };
-
-// ============================================================
-// GRADUATION DATA (tgr1 & tgr2 with many photos/videos)
-// ============================================================
+// حفلات
 const GRADUATION = {
     "TGR1": [
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.07.15 AM.jpeg",title:"stadge moment"  },
@@ -257,17 +287,13 @@ const GRADUATION = {
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.11.46 AM.jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 5.58.10 AM.jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.18.07 AM.jpeg", title: "stadge moment" },
-        
         { type: "image", src: "WhatsApp Image 2026-06-08 at 5.58.09 AM (2).jpeg", title: "stage moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 5.58.10 AM (2).jpeg", title: "stadge moment" },
-
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.25.55 AM.jpeg",title:"stadge moment"  },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.29.53 AM.jpeg",title: "Stadge Moment"  },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.29.29 AM.jpeg", title: "Stadge Moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.29.15 AM.jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.28.54 AM.jpeg", title: "stadge moment" },
-
-
     ],
     "TGR2": [
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.57.55 AM.jpeg", title: "stadge moment" },
@@ -290,8 +316,6 @@ const GRADUATION = {
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.58.25 AM.jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 7.55.41 AM.jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-08 at 6.58.23 AM (2).jpeg", title: "stadge moment" },
-
-
         
     ],
         "Events": [
@@ -301,31 +325,24 @@ const GRADUATION = {
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM (3).jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM (4).jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.57 AM (2).jpeg", title: "stadge moment" },
-        
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.41 AM.jpeg", title: "stage moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.56 AM (4).jpeg", title: "stadge moment" },
-
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.56 AM (5).jpeg",title:"stadge moment"  },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.56 AM (2).jpeg",title: "Stadge Moment"  },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.56 AM (1).jpeg", title: "Stadge Moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.56 AM (1).jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM (1).jpeg", title: "stadge moment" },
-        
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.38 AM.jpeg",title:"stadge moment"  },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.37 AM.jpeg",title: "Stadge Moment"  },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.44 AM.jpeg", title: "Stadge Moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM (5).jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM (1).jpeg", title: "stadge moment" },
-
-        
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM.jpeg", title: "stadge moment" },
         { type: "image", src: "WhatsApp Image 2026-06-09 at 1.27.55 AM (2).jpeg", title: "stadge moment" },
     ],
 };
 
-// ============================================================
-// TESTIMONIALS DATA (Fallback, used if translations missing)
-// ============================================================
+// اراء
 const TESTIMONIALS = [
     { name: "Abdelrahman Hatem", role: "Front-End Developer", rating: 5, img: "WhatsApp Image 2026-06-08 at 4.37.13 AM.jpeg", text: "Two Grow Academy changed my life! I learned Front-End and now I work as a freelancer." },
     { name: "Mohamed Elbaz", role: "Graphic Designer", rating: 5, img: "WhatsApp Image 2026-06-08 at 4.44.14 AM.jpeg", text: "Amazing trainers and very practical content. I built a real portfolio during the course." },
@@ -333,12 +350,10 @@ const TESTIMONIALS = [
     { name: "sayed", role: "English Learner", rating: 5, img: "WhatsApp Image 2026-06-08 at 4.46.30 AM.jpeg", text: "My English improved a lot — speaking with confidence for the first time in my life." },
 ]
 
-// ============================================================
-// MULTI-LANGUAGE TRANSLATIONS (ar / en)
-// ============================================================
+// ترجمه
 const TRANSLATIONS = {
     ar: {
-        // Header
+        // هيدر
         nav_home: "الرئيسية",
         nav_about: "من نحن",
         nav_courses: "الكورسات",
@@ -348,8 +363,7 @@ const TRANSLATIONS = {
         nav_graduation: "التخرج",
         nav_contact: "اتصل بنا",
         register_btn: "سجل الآن",
-
-        // Hero
+        // هيرو
         hero_badge: "مرحباً بك في تو جرو أكاديمي",
         hero_title: "ابدأ مستقبلك مع",
         hero_title_accent: "تو جرو أكاديمي",
@@ -358,8 +372,7 @@ const TRANSLATIONS = {
         view_courses_btn: "استعرض الكورسات",
         students_count: "طالب",
         students_label: "ينموون معنا بالفعل",
-
-        // About
+        // عن
         about_badge: "— عن الأكاديمية",
         about_title: "عن",
         about_title_accent: "تو جرو أكاديمي",
@@ -370,45 +383,37 @@ const TRANSLATIONS = {
         mission_desc: "تقديم تعليم عملي عالي الجودة عبر مدربين خبراء ومشاريع حقيقية. تدريب وتشغيل الطلبه",
         why_title: "لماذا تو جرو؟",
         why_desc: "  مدربون خبراء، مشاريع عملية، شهادات معتمدة، ومجتمع قوي.تعليم لايف ومسجل . برنامج عليه كل المحاضرات ترجعلها ااي وقت",
-
-        // Stats
+        // حالات 
         courses_available: "كورس متاح",
         expert_trainers: "مدرب خبير",
         happy_students: "طالب سعيد",
         success_rate: "نسبة نجاح",
-
-        // Courses Section
+        // كورسات
         courses_section_badge: "— كورساتنا",
         courses_section_title: "استكشف كورساتنا",
         courses_section_desc: "اختر من بين مجموعة واسعة من الكورسات الاحترافية.",
         view_details: "تفاصيل",
-        
-        // Trainers Section
+        // خبراء
         trainers_section_badge: "— فريقنا",
         trainers_section_title: "مدربونا الخبراء",
         trainers_section_desc: "تعلم من محترفي الصناعة.",
-
-        // Offers Section
+        // اوفرات
         offers_section_badge: "— لفترة محدودة",
         offers_section_title: "العروض والخصومات الحالية",
         offers_section_desc: "احصل على أفضل العروض على كورساتنا الأكثر شهرة.",
         register_now: "سجل الآن",
-
-        // Projects Section
+        // مشاريغ
         projects_section_badge: "— أعمال الطلاب",
         projects_section_title: "مشاريع الطلاب",
         projects_section_desc: "مشاريع حقيقية أنشأها طلابنا الموهوبون.",
-
-        // Graduation Section
+        // مشاريع
         graduation_section_badge: "— الاحتفال بالنجاح",
         graduation_section_title: "حفلات التخرج",
         graduation_section_desc: "ذكريات من حفلات التخرج لدينا.",
-
-        // Testimonials
+        // اراء
         testimonials_section_badge: "— ماذا يقول الطلاب",
         testimonials_section_title: "آراء الطلاب",
-
-        // Contact
+        // تةاصل
         contact_section_badge: "— تواصل معنا",
         contact_section_title: "اتصل بنا",
         contact_section_desc: "لديك سؤال؟ أرسل لنا رسالة.",
@@ -426,16 +431,14 @@ const TRANSLATIONS = {
         phone_title: "الهاتف",
         email_title: "البريد الإلكتروني",
         open_map: "فتح في خرائط جوجل",
-
-        // Footer
+        // فةةتر
         footer_invest: "استثمر في نفسك. تعلم مهارات عملية، وابنِ مشاريع حقيقية، وابدأ المسيرة المهنية التي تستحقها.",
         footer_quick_links: "روابط سريعة",
         footer_contact_info: "معلومات الاتصال",
         footer_follow_us: "تابعنا",
         footer_stay_connected: "ابق على تواصل مع الأكاديمية عبر وسائل التواصل الاجتماعي.",
         copyright: "جميع الحقوق محفوظة",
-
-        // Course details page
+        // تفاصيل كورس
         back_to_courses: "رجوع إلى الكورسات",
         about_course: "عن الكورس",
         what_you_learn: "ماذا ستتعلم",
@@ -449,10 +452,8 @@ const TRANSLATIONS = {
         format_value: "مجموعات وأونلاين",
         register: "سجل الآن",
         months: "شهور",
-        about_course_desc: (course) =>
-  `في دورة ${course.title} الخاصة بنا سوف تتعلم خطوة بخطوة، وتعمل على مشاريع عملية حقيقية، وتنتهي بمحفظة أعمال`,
-
-        // Checklist items (translated)
+        about_course_desc_en: (course) => `في دورة ${course.title} الخاصة بنا، ستتعلم خطوة بخطوة، وتعمل على مشاريع حقيقية، وتنتهي بمحفظة أعمال.`,
+        // ترجمخه
         checklist_items: [
             "أسس قوية ومفاهيم أساسية",
             "تطبيق عملي على مشاريع حقيقية",
@@ -460,8 +461,7 @@ const TRANSLATIONS = {
             "أفضل الممارسات ونصائح للمهنة",
             "مشروع نهائي يضاف إلى بورتفوليو الخاص بك"
         ],
-
-        // Testimonials list (Arabic)
+        // اراء
         testimonials_list: [
             { name: "عبدالرحمن حاتم ", role: "طالب فرونت إند", rating: 5,img:"WhatsApp Image 2026-06-08 at 4.37.13 AM.jpeg", text: " تو جرو أكاديمي غيرت حياتي! تعلمت الفرونت إند ودلوقتي شغال فريلانس ." },
             { name:"محمد الباز", role: "طالب جرافيك", rating: 5,img:"WhatsApp Image 2026-06-08 at 4.44.14 AM.jpeg", text: "مدربين علي اعلي مستوي   ومحتوى عملي ومفيد جدًا. بنيت بورتفوليو حقيقي وقت  الكورس." },
@@ -470,7 +470,7 @@ const TRANSLATIONS = {
         ]
     },
     en: {
-        // Header
+        // هيدر
         nav_home: "Home",
         nav_about: "About",
         nav_courses: "Courses",
@@ -480,8 +480,7 @@ const TRANSLATIONS = {
         nav_graduation: "Graduation",
         nav_contact: "Contact",
         register_btn: "Register Now",
-
-        // Hero
+        // هيرة
         hero_badge: "WELCOME TO TWO GROW ACADEMY",
         hero_title: "START YOUR FUTURE WITH",
         hero_title_accent: "TO GROW ACADEMY",
@@ -490,8 +489,7 @@ const TRANSLATIONS = {
         view_courses_btn: "View Courses",
         students_count: "Students",
         students_label: "are already growing with us",
-
-        // About
+        // غن
         about_badge: "— ABOUT THE ACADEMY",
         about_title: "About",
         about_title_accent: "To Grow Academy",
@@ -502,45 +500,37 @@ const TRANSLATIONS = {
         mission_desc: "To deliver high-quality, practical education through expert trainers and real projects.",
         why_title: "Why Two Grow?",
         why_desc: "Expert trainers, practical projects, recognized certificates, and a strong community.",
-
         // Stats
         courses_available: "Courses Available",
         expert_trainers: "Expert Trainers",
         happy_students: "Happy Students",
         success_rate: "Success Rate",
-
-        // Courses Section
+        // Courses 
         courses_section_badge: "— OUR COURSES",
         courses_section_title: "Explore Our Courses",
         courses_section_desc: "Choose from a wide range of professional courses.",
         view_details: "View Details",
         
-
-        // Trainers Section
+        // خيراء
         trainers_section_badge: "— MEET THE TEAM",
         trainers_section_title: "Our Expert Trainers",
         trainers_section_desc: "Learn from industry professionals.",
-
-        // Offers Section
+        // Offer
         offers_section_badge: "— LIMITED TIME",
         offers_section_title: "Current Offers & Discounts",
         offers_section_desc: "Grab the best deals on our most popular courses.",
         register_now: "Register Now",
-
-        // Projects Section
+        // Project
         projects_section_badge: "— STUDENT WORK",
         projects_section_title: "Student Projects",
         projects_section_desc: "Real projects built by our talented students.",
-
-        // Graduation Section
+        // حفلات
         graduation_section_badge: "— CELEBRATING SUCCESS",
         graduation_section_title: "Graduation Ceremonies",
         graduation_section_desc: "Memories from our graduation ceremonies.",
-
-        // Testimonials
+        // اراء
         testimonials_section_badge: "— WHAT STUDENTS SAY",
         testimonials_section_title: "Student Testimonials",
-
         // Contact
         contact_section_badge: "— GET IN TOUCH",
         contact_section_title: "Contact Us",
@@ -559,7 +549,6 @@ const TRANSLATIONS = {
         phone_title: "Phone",
         email_title: "Email",
         open_map: "Open in Google Maps",
-
         // Footer
         footer_invest: "Invest in yourself. Learn practical skills, build real projects, and start the career you deserve.",
         footer_quick_links: "Quick Links",
@@ -567,8 +556,7 @@ const TRANSLATIONS = {
         footer_follow_us: "Follow Us",
         footer_stay_connected: "Stay connected with the academy on social media.",
         copyright: "All Rights Reserved.",
-
-        // Course details page
+        // Course details
         back_to_courses: "Back to Courses",
         about_course: "About the Course",
         what_you_learn: "What You'll Learn",
@@ -582,10 +570,9 @@ const TRANSLATIONS = {
         format_value: "Group & Online",
         register: "Register Now",
         months: "Months",
-about_course_desc_en: (course) =>
-  `In our ${course.title} course, you will learn step by step, work on real projects, and finish with a portfolio.`,
-
-        // Checklist items (English)
+        about_course_desc_en: (course) =>
+        `In our ${course.title} course, you will learn step by step, work on real projects, and finish with a portfolio.`,
+        // Checklist 
         checklist_items: [
             "Strong foundations and core concepts",
             "Hands-on practice with real projects",
@@ -593,14 +580,12 @@ about_course_desc_en: (course) =>
             "Best practices and career tips",
             "Final project added to your portfolio"
         ],
-
-        // Testimonials list (English)
+        // اراء
         testimonials_list: [
             { name: "Abdelrahman Hatem", role: "Front-End Developer", rating: 5,img:"WhatsApp Image 2026-06-08 at 4.37.13 AM.jpeg", text: "Two Grow Academy changed my life! I learned Front-End and now I work as a freelancer." },
             { name: "Mohamed Elbaz", role: "Graphic Designer", rating: 5,img:"WhatsApp Image 2026-06-08 at 4.44.14 AM.jpeg", text: "Trainers at the highest level and very practical and useful content. I built a real portfolio during the course.." },
             { name: "Ahmed shreef", role: "Digital Marketer", rating: 5,img:"WhatsApp Image 2026-06-08 at 4.41.18 AM.jpeg", text: "I seriously learned digital; the place is very nice, I benefited a lot and took from the trainer's experience, and now I am managing brands." },
             { name: "sayed", role: "English Learner", rating: 5,img:"WhatsApp Image 2026-06-08 at 4.46.30 AM.jpeg", text: "Honestly, English before you knew something and after something completely different, I learned it and started speaking with confidence." },
-
         ]
     }
-};
+};  
