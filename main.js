@@ -1,6 +1,4 @@
-// ============================================================
-// RENDER COURSES (supports language, translates "Months")
-// ============================================================
+// كورسات 
 window.renderCourses = function(lang = "en") {
     const coursesGrid = document.getElementById("coursesGrid");
     if (!coursesGrid) return;
@@ -14,17 +12,13 @@ window.renderCourses = function(lang = "en") {
         const title = lang === "ar" && c.title_ar
     ? c.title_ar
     : c.title;
-
-const short = lang === "ar" && c.short_ar
+    const short = lang === "ar" && c.short_ar
     ? c.short_ar
     : c.short;
         return `
             <article class="course-card">
                 <div class="course-img">
-                    
-                    
                     <img src="${c.img}" alt="${c.name}">
-                
                 </div>
                 <div class="course-body">
                     <h4>${title}</h4>
@@ -44,10 +38,7 @@ const short = lang === "ar" && c.short_ar
         `;
     }).join("");
 };
-
-// ============================================================
-// RENDER TRAINERS (10 trainers with Arabic/English support)
-// ============================================================
+// خبره
 window.renderTrainers = function(lang = "en") {
     const trainersGrid = document.getElementById("trainersGrid");
     if (!trainersGrid) return;
@@ -63,19 +54,24 @@ window.renderTrainers = function(lang = "en") {
                 <span class="role">${role}</span>
                 <p class="muted small">${bio}</p>
                 <div class="socials center">
-                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
-                    <a href="#"><i class="fa-brands fa-linkedin-in"></i></a>
-                    <a href="#"><i class="fa-brands fa-whatsapp"></i></a>
-                </div>
+    <a href="${t.facebook}" target="_blank">
+        <i class="fa-brands fa-facebook-f"></i>
+    </a>
+    <a href="${t.instagram}" target="_blank">
+        <i class="fa-brands fa-instagram"></i>
+    </a>
+    <a href="${t.tiktok}" target="_blank">
+        <i class="fa-brands fa-tiktok"></i>
+    </a>
+    <a href="${t.whatsapp}" target="_blank">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+</div>
             </article>
         `;
     }).join("");
 };
-
-// ============================================================
-// RENDER OFFERS (7 offers with translation for button)
-// ============================================================
+// عروض
 window.renderOffers = function(lang = "en") {
     const offersGrid = document.getElementById("offersGrid");
     if (!offersGrid) return;
@@ -86,14 +82,14 @@ window.renderOffers = function(lang = "en") {
                 <span class="discount">-${o.discount}%</span>
             </div>
             <div class="offer-body">
-                <h4>${o.course}</h4>
+                <h4>${lang === "ar" ? o.course_ar : o.course}</h4>
                 <div class="prices">
                     <span class="old">${o.oldPrice} EGP</span>
                     <span class="new">${o.newPrice} EGP</span>
                 </div>
                 <p class="muted small">
                     <i class="fa-regular fa-clock"></i>
-                    ${o.duration}
+                    ${lang === "ar" ? o.duration_ar : o.duration}
                 </p>
                 <a href="#contact" class="btn btn-primary w-full">
                     ${t?.register_now || 'Register Now'}
@@ -102,10 +98,7 @@ window.renderOffers = function(lang = "en") {
         </article>
     `).join("");
 };
-
-// ============================================================
-// PROJECTS & GRADUATION GALLERY (tabbed)
-// ============================================================
+// مشاريع
 function buildTabbed(tabsEl, galleryEl, data) {
     const keys = Object.keys(data);
     let current = keys[0];
@@ -132,54 +125,39 @@ if (item.type === "video")
     }
     render();
 }
-
 const projTabs = document.getElementById("projectTabs");
 const projGal = document.getElementById("projectGallery");
 if (projTabs && projGal) buildTabbed(projTabs, projGal, PROJECTS);
-
 const gradTabs = document.getElementById("gradTabs");
 const gradGal = document.getElementById("gradGallery");
 if (gradTabs && gradGal) buildTabbed(gradTabs, gradGal, GRADUATION);
-
-// ============================================================
-// LIGHTBOX
-// ============================================================
+// مود فاتج
 const lightbox = document.getElementById("lightbox");
 const lbContent = document.getElementById("lbContent");
-
 function openLightbox(html) {
     if (!lightbox) return;
     lbContent.innerHTML = html;
     lightbox.classList.add("open");
 }
-
 document.getElementById("lbClose")?.addEventListener("click", () => {
     lightbox.classList.remove("open");
     lbContent.innerHTML = "";
 });
-
 lightbox?.addEventListener("click", (e) => {
     if (e.target === lightbox) {
         lightbox.classList.remove("open");
         lbContent.innerHTML = "";
     }
 });
-
-// ============================================================
-// TESTIMONIALS SLIDER (fully working with re-render)
-// ============================================================
+// اراء
 let testimonialInterval;
-
 window.renderTestimonials = function(lang = "en") {
     const track = document.getElementById("testiTrack");
     const dotsContainer = document.getElementById("testiDots");
     if (!track || !dotsContainer) return;
-
     if (testimonialInterval) clearInterval(testimonialInterval);
-
 const t = TRANSLATIONS[lang];
 const items = t?.testimonials_list || TESTIMONIALS;
-
     track.innerHTML = items.map(item => `
         <article class="testi-slide">
             <div class="stars">${"★".repeat(item.rating)}${"☆".repeat(5 - item.rating)}</div>
@@ -193,14 +171,11 @@ const items = t?.testimonials_list || TESTIMONIALS;
             </div>
         </article>
     `).join("");
-
     dotsContainer.innerHTML = items.map((_, i) => `
         <button class="dot ${i === 0 ? 'active' : ''}" data-index="${i}"></button>
     `).join("");
-
     let currentIndex = 0;
     const total = items.length;
-
     function goToSlide(index) {
         currentIndex = (index + total) % total;
         track.style.transform = `translateX(-${currentIndex * 100}%)`;
@@ -208,10 +183,8 @@ const items = t?.testimonials_list || TESTIMONIALS;
             dot.classList.toggle("active", i === currentIndex);
         });
     }
-
     const prevBtn = document.getElementById("testiPrev");
     const nextBtn = document.getElementById("testiNext");
-
     if (prevBtn) prevBtn.onclick = () => {
         clearInterval(testimonialInterval);
         goToSlide(currentIndex - 1);
@@ -222,7 +195,6 @@ const items = t?.testimonials_list || TESTIMONIALS;
         goToSlide(currentIndex + 1);
         testimonialInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
     };
-
     document.querySelectorAll(".dot").forEach(dot => {
         dot.onclick = () => {
             clearInterval(testimonialInterval);
@@ -230,34 +202,24 @@ const items = t?.testimonials_list || TESTIMONIALS;
             testimonialInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
         };
     });
-
     goToSlide(0);
     testimonialInterval = setInterval(() => goToSlide(currentIndex + 1), 6000);
 };
-
-// ============================================================
-// CONTACT FORM HANDLER
-// ============================================================
+// تواصل
 document.getElementById("contactForm")?.addEventListener("submit", (e) => {
     e.preventDefault();
     const formData = Object.fromEntries(new FormData(e.target));
     alert(`Thank you ${formData.name}! We received your message and will contact you soon.`);
     e.target.reset();
 });
-
-// ============================================================
-// THEME TOGGLE (Dark/Light Mode)
-// ============================================================
+//  (Dark/Light Mode)
 const themeBtn = document.getElementById("themeToggle");
 themeBtn?.addEventListener("click", () => {
     const isLight = document.documentElement.getAttribute("data-theme") === "light";
     document.documentElement.setAttribute("data-theme", isLight ? "dark" : "light");
     themeBtn.innerHTML = isLight ? '<i class="fa-solid fa-moon"></i>' : '<i class="fa-solid fa-sun"></i>';
 });
-
-// ============================================================
-// MOBILE MENU TOGGLE
-// ============================================================
+// قاءمه منسداه
 const menuBtn = document.getElementById("menuBtn");
 const navLinks = document.querySelector(".nav-links");
 menuBtn?.addEventListener("click", () => navLinks.classList.toggle("open"));
@@ -265,9 +227,7 @@ navLinks?.querySelectorAll("a").forEach(link => {
     link.addEventListener("click", () => navLinks.classList.remove("open"));
 });
 
-// ============================================================
-// ACTIVE NAVIGATION ON SCROLL & BACK TO TOP
-// ============================================================
+
 const sections = document.querySelectorAll("section[id]");
 const navAnchors = document.querySelectorAll(".nav-links a");
 
@@ -289,9 +249,7 @@ document.getElementById("toTop")?.addEventListener("click", () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
-// ============================================================
-// INITIAL RENDER (call after all definitions)
-// ============================================================
+
 if (window.renderCourses) window.renderCourses("en");
 if (window.renderTrainers) window.renderTrainers("en");
 if (window.renderOffers) window.renderOffers("en");
